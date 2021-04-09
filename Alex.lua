@@ -8845,20 +8845,20 @@ function tdcli_update_callback(data)
     print("OLD MESSAGE")
     return false
     end
-    if text == 'تعطيل تحقق' and Addictive(msg) then   
+    if text == 'تعطيل التحقق' and Addictive(msg) then   
     database:del(bot_id..'Alex:nwe:mem:group'..msg.chat_id_) 
-    send(msg.chat_id_, msg.id_,'\n تم تعطيل تحقق' ) 
+    send(msg.chat_id_, msg.id_,'\n- تم تعطيل التحقق' ) 
     end
-    if text == 'تفعيل تحقق' and Addictive(msg) then  
+    if text == 'تفعيل التحقق' and Addictive(msg) then  
     database:set(bot_id..'Alex:nwe:mem:group'..msg.chat_id_,'true') 
-    send(msg.chat_id_, msg.id_,'\nتم تفعيل تحقق' ) 
+    send(msg.chat_id_, msg.id_,'\n- تم تفعيل التحقق' ) 
     end 
     
     if msg.content_.ID == "MessageChatJoinByLink" and database:get(bot_id..'Alex:nwe:mem:group'..msg.chat_id_) == 'true'then
     numphoto = {'3','8','9','6'}
     numphotoid = numphoto[math.random(#numphoto)]
     local numjoine = (numphotoid + 3)
-    local Texti = 'اختر اللجابه الصحيحه \n'..numphotoid..' + 3 ='
+        local Texti = '- اختر الاجابة الصحيحة\n'..numphotoid..' + 3 ='
     local num1 = (5 + numphotoid)
     local num2 = (7 + numphotoid)
     local num3 = (1 + numphotoid)
